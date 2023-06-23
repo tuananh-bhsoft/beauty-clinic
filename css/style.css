@@ -525,8 +525,8 @@ html {
 }
 
 .bg-section-4 {
-  background: url("../assets/imgs/bgs/FooterBG.png") no-repeat center bottom, url("../assets/imgs/bgs/BottomBG.svg") no-repeat center 100%;
-  background-size: cover, contain;
+  background: url("../assets/imgs/bgs/FooterBG.png") no-repeat center bottom;
+  background-size: cover;
 }
 
 .container {
@@ -974,7 +974,7 @@ html {
 }
 .footer .content-wrapper .footer-info .site-doc .sitemap .list,
 .footer .content-wrapper .footer-info .site-doc .documents .list {
-  list-style-image: url("../../assets/icons/design-elements/Bullet.svg");
+  list-style-image: url("../assets/icons/design-elements/Bullet.svg");
   padding-left: 12px;
   padding-top: 15px;
 }
