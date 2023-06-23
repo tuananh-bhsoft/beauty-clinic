@@ -8,26 +8,24 @@
 @import "./mixins/contact-us";
 
 .bg-section-1 {
-  background: url("../../../assets/imgs/bgs/SlideBackground.png") no-repeat top
-    left;
+  background: url("../assets/imgs/bgs/SlideBackground.png") no-repeat top left;
   background-size: contain;
 }
 
 .bg-section-2 {
-  background: url("../../../assets/imgs/bgs/BG1.png") no-repeat center right;
+  background: url("../assets/imgs/bgs/BG1.png") no-repeat center right;
   background-size: contain;
 }
 
 .bg-section-3 {
-  background: url("../../../assets/imgs/bgs/BG2.png") no-repeat center left;
+  background: url("../assets/imgs/bgs/BG2.png") no-repeat center left;
   background-size: contain;
 }
 
 .bg-section-4 {
   // background: $bgSecondary;
-  background: url("../../../assets/imgs/bgs/FooterBG.png") no-repeat center
-      bottom,
-    url("../../../assets/imgs/bgs/BottomBG.svg") no-repeat center 100%;
+  background: url("../assets/imgs/bgs/FooterBG.png") no-repeat center bottom,
+    url("../assets/imgs/bgs/BottomBG.svg") no-repeat center 100%;
   background-size: cover, contain;
 }
 
