@@ -511,17 +511,17 @@ html {
 
 .bg-section-1 {
   background: url("../assets/imgs/bgs/SlideBackground.png") no-repeat top left;
-  background-size: contain;
+  background-size: 90% 100%;
 }
 
 .bg-section-2 {
-  background: url("../assets/imgs/bgs/BG1.png") no-repeat center right;
-  background-size: contain;
+  background: url("../assets/imgs/bgs/BG1.png") no-repeat bottom right;
+  background-size: 60% 60%;
 }
 
 .bg-section-3 {
-  background: url("../assets/imgs/bgs/BG2.png") no-repeat center left;
-  background-size: contain;
+  background: url("../assets/imgs/bgs/BG2.png") no-repeat bottom left;
+  background-size: 80% 60%;
 }
 
 .bg-section-4 {
@@ -653,6 +653,7 @@ html {
 .slider .slide-container .slide .slide-info .description {
   color: #091156;
   font-size: 1rem;
+  font-weight: normal;
   margin-top: 20px;
 }
 .slider .slide-container .slide .slide-info .more-details {
@@ -1006,10 +1007,10 @@ html {
   display: none;
 }
 .footer .roll-to-top div {
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
   background: #ff64ae;
-  border-radius: 15px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
