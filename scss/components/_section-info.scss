@@ -1,0 +1,28 @@
+@import "../utils/variables";
+
+%section-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: $space-10;
+
+  .section-header {
+    color: $textSecondary;
+    font-size: $textMedium;
+    line-height: 125%;
+    letter-spacing: normal;
+  }
+
+  .section-title {
+    color: $textPrimary;
+    font-size: $textLarge;
+    line-height: 125%;
+    letter-spacing: normal;
+  }
+
+  .section-description {
+    color: $textTertiary;
+    font-size: $textMedium;
+    font-weight: 400;
+  }
+}

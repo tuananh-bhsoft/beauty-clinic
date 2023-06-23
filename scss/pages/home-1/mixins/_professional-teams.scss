@@ -1,0 +1,101 @@
+@import "../../../utils/variables";
+@import "../../../layout/flex";
+@import "../../../components/section-info";
+@import "../../../components/card";
+
+@mixin professional-teams {
+  @extend %flex-col-center;
+  margin-top: $space-200;
+
+  .section-info {
+    @extend %section-info;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-content {
+    @extend %flex-row-center;
+    width: 100%;
+    margin-top: $space-100;
+
+    .expert-card {
+      @extend %card;
+
+      img {
+        max-width: 146px;
+        max-height: 146px;
+        margin: $space-40 0;
+      }
+
+      .card-info {
+        .social-links {
+          @extend %flex-row-center;
+          column-gap: $space-40;
+          margin: $space-40 0;
+
+          .social-icon {
+            @extend %flex-row-center;
+            background: $bgWhite;
+            padding: 12px;
+            border-radius: 50px;
+            box-shadow: -2px 6px 16px -1px $shadowSecondary;
+            transition: $transition;
+
+            img {
+              width: 24px;
+              height: 24px;
+              margin: 0;
+            }
+
+            &:hover {
+              cursor: pointer;
+              box-shadow: 0px 25px 50px 25px $shadowSecondary;
+            }
+          }
+        }
+      }
+
+      &:first-child {
+        background: transparent;
+        position: relative;
+        right: -30px;
+        box-shadow: none;
+      }
+
+      &:last-child {
+        background: transparent;
+        position: relative;
+        right: 30px;
+        box-shadow: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: $laptop) {
+    & {
+      padding: 0 $space-40;
+
+      .section-content {
+        flex-direction: column;
+
+        .expert-card {
+          width: 100%;
+
+          &:first-child {
+            position: static;
+          }
+
+          &:last-child {
+            position: static;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+  }
+
+  @media screen and (max-width: $mobile) {
+  }
+}

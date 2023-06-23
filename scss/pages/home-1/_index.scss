@@ -1,0 +1,65 @@
+@import "../../layout/header";
+@import "../../layout/footer";
+
+@import "./mixins/slider";
+@import "./mixins/main-services";
+@import "./mixins/about-us";
+@import "./mixins/professional-teams";
+@import "./mixins/contact-us";
+
+.bg-section-1 {
+  background: url("../../../assets/imgs/bgs/SlideBackground.png") no-repeat top
+    left;
+  background-size: contain;
+}
+
+.bg-section-2 {
+  background: url("../../../assets/imgs/bgs/BG1.png") no-repeat center right;
+  background-size: contain;
+}
+
+.bg-section-3 {
+  background: url("../../../assets/imgs/bgs/BG2.png") no-repeat center left;
+  background-size: contain;
+}
+
+.bg-section-4 {
+  // background: $bgSecondary;
+  background: url("../../../assets/imgs/bgs/FooterBG.png") no-repeat center
+      bottom,
+    url("../../../assets/imgs/bgs/BottomBG.svg") no-repeat center 100%;
+  background-size: cover, contain;
+}
+
+.container {
+  max-width: $contentWidth;
+  margin: 0 auto;
+}
+
+.header {
+  @include header;
+}
+
+.slider {
+  @include slider;
+}
+
+.main-services {
+  @include main-services;
+}
+
+.about-us {
+  @include about-us;
+}
+
+.professional-teams {
+  @include professional-teams;
+}
+
+.contact-us {
+  @include contact-us;
+}
+
+.footer {
+  @include footer;
+}

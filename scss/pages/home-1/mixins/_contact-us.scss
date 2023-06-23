@@ -1,0 +1,81 @@
+@import "../../../utils/variables";
+@import "../../../layout/flex";
+@import "../../../components/section-info";
+@import "../../../components/button";
+
+@mixin contact-us {
+  @extend %flex-row-center;
+  column-gap: $space-40;
+  margin-top: $space-200;
+
+  .section-content {
+    flex: 1;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .section-info {
+    @extend %section-info;
+    align-items: flex-start;
+    flex: 1;
+
+    .section-title {
+      width: 80%;
+    }
+
+    #form {
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 20px;
+        border: 1px solid $linePrimary;
+        border-radius: 15px;
+        margin-top: $space-40;
+      }
+
+      .name {
+        @extend %flex-row-center;
+        column-gap: $space-40;
+      }
+
+      input[type="submit"] {
+        @extend %cta-button;
+        margin-top: $space-40;
+      }
+
+      ::placeholder {
+        color: $textTertiaryLight;
+        font-size: $textMedium;
+        font-weight: 400;
+      }
+    }
+  }
+
+  @media screen and (max-width: $laptop) {
+    & {
+      flex-direction: column;
+      row-gap: $space-100;
+      padding: 0 $space-40;
+
+      .section-info {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+  }
+
+  @media screen and (max-width: $mobile) {
+    .section-info {
+      #form {
+        .name {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

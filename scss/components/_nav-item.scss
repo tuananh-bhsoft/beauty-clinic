@@ -1,0 +1,22 @@
+@import "../utils/variables";
+
+%nav-item {
+  a {
+    text-decoration: none;
+    color: $textTertiary;
+    font-size: $textMedium;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: $transition;
+  }
+
+  &.active a {
+    color: $textPrimaryLight;
+    font-weight: 600;
+  }
+
+  &:hover a {
+    cursor: pointer;
+    color: $textPrimaryLight;
+  }
+}

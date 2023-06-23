@@ -1,0 +1,150 @@
+@import "../utils/variables";
+@import "./flex";
+
+@mixin footer {
+  padding-top: $space-200;
+  margin-top: $space-200;
+
+  .content-wrapper {
+    @extend %flex-col-center;
+    max-width: $contentWidth;
+    margin: 0 auto;
+
+    .footer-info {
+      @extend %flex-row-start;
+      width: 100%;
+
+      .authorship {
+        @extend %flex-col-start;
+        row-gap: $space-20;
+        flex: 1;
+
+        p {
+          color: $textPrimarySLight;
+          font-size: $textMedium;
+          font-weight: 400;
+
+          span {
+            font-weight: 700;
+          }
+        }
+
+        .info {
+          font-style: italic;
+          font-size: $textSmall;
+          @extend %flex-col-start;
+
+          .contact-info {
+            @extend %flex-row-center;
+            column-gap: $space-40;
+          }
+        }
+      }
+
+      .site-doc {
+        flex: 1;
+        @extend %flex-row-start;
+
+        .sitemap,
+        .documents {
+          flex: 1;
+
+          .list-header {
+            color: $textWhite;
+            font-size: $textXMedium;
+          }
+
+          .list {
+            list-style-image: url("../../assets/icons/design-elements/Bullet.svg");
+            padding-left: 12px;
+            padding-top: 15px;
+
+            .list-item {
+              color: $textPrimarySLight;
+              font-size: $textMedium;
+              font-weight: 400;
+              margin-top: $space-10;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-socials {
+      @extend %flex-row-center;
+      width: 100%;
+      margin: $space-100 0;
+
+      .social-links {
+        @extend %flex-row-center;
+        column-gap: $space-40;
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      .copyright {
+        color: $textPrimarySLight;
+        font-size: $textMedium;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .roll-to-top {
+    display: none;
+
+    div {
+      width: 50px;
+      height: 50px;
+      background: $bgPrimary;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      right: 50px;
+      bottom: 100px;
+      transition: $transition;
+
+      &:hover {
+        cursor: pointer;
+        background: $bgSecondary;
+        box-shadow: -2px 6px 16px -1px $shadowSecondary;
+      }
+    }
+  }
+
+  @media screen and (max-width: $laptop) {
+    & {
+      padding: $space-200 $space-40 0 $space-40;
+
+      .footer-info {
+        flex-direction: column;
+        row-gap: $space-60;
+
+        .authorship {
+          width: 100%;
+        }
+
+        .site-doc {
+          flex-direction: column;
+          row-gap: $space-60;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    .footer-socials {
+      flex-direction: column;
+      row-gap: $space-40;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+  }
+}

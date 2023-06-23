@@ -1,0 +1,91 @@
+@import "../../../utils/variables";
+@import "../../../layout/flex";
+@import "../../../components/button";
+
+@mixin slider {
+  @extend %flex-col-center;
+
+  .slide-container {
+    padding: $space-100 0;
+    margin-top: $space-120;
+
+    .slide {
+      @extend %flex-row-center;
+      column-gap: $space-40;
+
+      .slide-info {
+        @extend %flex-col-start;
+        flex: 1;
+
+        .title {
+          color: $textPrimary;
+          font-size: $textXLarge;
+          line-height: 125%;
+          letter-spacing: normal;
+        }
+
+        .description {
+          color: $textPrimary;
+          font-size: $textMedium;
+          margin-top: $space-20;
+        }
+
+        .more-details {
+          @extend %cta-button;
+          margin-top: $space-40;
+        }
+      }
+
+      .slide-img {
+        flex: 1;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .slide-marker {
+    @extend %flex-row-center;
+    column-gap: $space-10;
+
+    .marker {
+      background: $bgTertiary;
+      height: 3px;
+      width: 15px;
+      border-radius: 50px;
+
+      &.active {
+        background: $bgSecondaryLight;
+        height: 8px;
+        width: 25px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $laptop) {
+    & {
+      padding: 0 $space-40;
+
+      .slide-container {
+        .slide {
+          .slide-info {
+            align-items: center;
+            text-align: center;
+          }
+
+          .slide-img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+  }
+
+  @media screen and (max-width: $mobile) {
+  }
+}

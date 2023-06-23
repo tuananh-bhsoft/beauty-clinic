@@ -1,0 +1,37 @@
+@import "../utils/variables";
+@import "../layout/flex";
+
+%card {
+  @extend %flex-col-center;
+  background: $bgWhite;
+  padding: 50px;
+  border-radius: 40px;
+  box-shadow: 0 25px 50px 25px $shadowPrimary;
+
+  .card-info {
+    @extend %flex-col-center;
+    text-align: center;
+
+    .card-header {
+      color: $textSecondary;
+      font-size: $textMedium;
+      line-height: 125%;
+      letter-spacing: normal;
+    }
+
+    .card-title {
+      color: $textPrimary;
+      font-size: $textXMedium;
+      line-height: 125%;
+      letter-spacing: normal;
+      margin-top: $space-20;
+    }
+
+    .card-description {
+      color: $textTertiary;
+      font-size: $textSmall;
+      font-weight: 400;
+      margin-top: $space-20;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+@import "../utils/variables";
+@import "./flex";
+@import "../components/button";
+@import "../components/nav-item";
+
+@mixin header {
+  position: fixed;
+  top: $space-30;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  transition: $transition;
+
+  &.scrolled {
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 10px 13px 80px 14px rgba(242, 244, 255, 0.95);
+  }
+
+  .content-wrapper {
+    @extend %flex-row-center;
+    max-width: $contentWidth;
+    padding: $space-10 0;
+    margin: 0 auto;
+
+    .nav {
+      @extend %flex-row-center;
+      column-gap: $space-40;
+
+      .hamburger {
+        display: none;
+        width: 30px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .nav-links {
+        @extend %flex-row-center;
+        column-gap: $space-40;
+        list-style-type: none;
+
+        .nav-item {
+          @extend %nav-item;
+        }
+      }
+
+      .contact-button {
+        @extend %button;
+      }
+    }
+  }
+
+  .side-drawer {
+    display: none;
+
+    .overlay {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: -100%;
+      background: rgba(51, 51, 51, 0.5);
+      transition: 0.5s ease-in-out;
+
+      &-shown {
+        left: 0;
+      }
+    }
+
+    .drawer-content {
+      position: fixed;
+      top: 0;
+      left: -350px;
+      width: 350px;
+      height: 100%;
+      background: $bgWhite;
+      padding: $space-20;
+      transition: 0.5s ease-in-out;
+
+      .top {
+        @extend %flex-row-center;
+
+        .close {
+          width: 30px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .side-nav-links {
+        @extend %flex-col-start;
+        row-gap: $space-20;
+        list-style-type: none;
+        padding-left: 5px;
+        margin-top: $space-30;
+
+        .side-nav-item {
+          @extend %nav-item;
+        }
+      }
+
+      &-shown {
+        left: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: $laptop) {
+    .content-wrapper {
+      padding: $space-10 $space-40;
+
+      .nav {
+        .hamburger {
+          display: block;
+        }
+
+        .nav-links {
+          display: none;
+        }
+      }
+    }
+
+    .side-drawer {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    .content-wrapper {
+      .nav {
+        .contact-button {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .side-drawer {
+      .drawer-content-shown {
+        width: 100%;
+      }
+    }
+  }
+}
