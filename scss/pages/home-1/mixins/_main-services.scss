@@ -68,16 +68,16 @@
       grid-template-columns: auto;
     }
   }
-}
 
-@media screen and (max-width: $mobile) {
-  .section-info {
-    .section-title {
-      width: 100%;
-    }
+  @media screen and (max-width: $mobile) {
+    .section-info {
+      .section-title {
+        width: 100%;
+      }
 
-    .section-description {
-      width: 100%;
+      .section-description {
+        width: 100%;
+      }
     }
   }
 }
